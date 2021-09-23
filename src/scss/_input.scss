@@ -1,0 +1,123 @@
+@import "variables";
+
+.autocomplete-container {
+  position: relative;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+ul#autoComplete_list {
+  position: absolute;
+  margin-left: 0;
+  margin-right: 0;
+  top: 50px;
+  width: auto;
+}
+
+input#autoComplete {
+  box-sizing: border-box;
+  height: 3rem;
+  width: 16.5rem;
+  border: 0.05rem solid $grey80;
+  caret-color: $grey80;
+  border-radius: $roundness;
+  background-image: url(../assets/icons/icon-search.svg);
+  background-size: 1.5rem;
+  background-position: left 1.05rem top 0.7rem;
+  color: $grey80;
+
+  &::placeholder {
+    color: $grey80;
+  }
+
+  &:focus,
+  &:hover,
+  &:active {
+    color: $grey80;
+    border: 0.05rem solid $grey80;
+    caret-color: $grey80;
+    box-shadow: 0 6px 8px $grey40;
+    background-image: url(../assets/icons/icon-search.svg);
+    background-size: 1.5rem;
+    background-position: left 1.05rem top 0.7rem;
+
+    &::placeholder {
+      color: lighten($grey80, $amount: 16%);
+    }
+    &::selection {
+      background: $grey80;
+    }
+  }
+
+  &:focus {
+    &::placeholder {
+      color: transparent;
+    }
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    border-color: $grey40;
+    background-image: url(../assets/icons/icon-search-lighter.svg);
+
+    &:hover {
+      box-shadow: none;
+    }
+  }
+}
+
+.autoComplete_highlighted {
+  color: $grey80--lightblueish;
+}
+
+.autoComplete_result,
+.autoComplete_selected {
+  background: #fff;
+
+  &:hover {
+    background: #fff;
+    border-left: 2px solid $grey80--blueish;
+    border-right: 2px solid $grey80--blueish;
+  }
+}
+
+.autoComplete_selected {
+  border-left: 2px solid $grey80--blueish;
+  border-right: 2px solid $grey80--blueish;
+
+  &:last-child {
+    border-bottom: 2px solid $grey80--blueish;
+  }
+}
+
+.autoComplete_result:last-child {
+  &:hover {
+    border-bottom: 2px solid $grey80--blueish;
+  }
+}
+
+.no_result {
+  margin-left: 1rem;
+  margin-top: 0.3rem;
+}
+
+@media all and (max-width: (768) + px) {
+  .autocomplete-container {
+    width: 100%;
+  }
+
+  input#autoComplete {
+    width: 100%;
+
+    &:focus,
+    &:hover,
+    &:active {
+      width: 100%;
+    }
+  }
+
+  .autoComplete_result:first-child {
+    border-top-right-radius: 0px;
+    border-top-left-radius: 0px;
+  }
+}

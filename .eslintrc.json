@@ -1,0 +1,14 @@
+{
+    "env": {
+        "browser": true,
+        "es2020": true
+    },
+    "extends": ["eslint:recommended", "plugin:jest-dom/recommended", "plugin:testing-library/recommended", "prettier"],
+    "parserOptions": {
+        "ecmaVersion": 11,
+        "sourceType": "module"
+    },
+    "plugins": ["jest-dom", "testing-library"],
+    "rules": {
+    }
+}

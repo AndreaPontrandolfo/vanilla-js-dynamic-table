@@ -1,0 +1,17 @@
+@import "variables";
+
+.no-data {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4rem;
+  color: $grey30;
+  flex-direction: column;
+
+  & img {
+    opacity: 0.3;
+    max-width: 100%;
+  }
+}

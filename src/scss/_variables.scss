@@ -1,0 +1,17 @@
+$grey20: #f6f7fa;
+$grey30: #e4e7eb;
+$grey40: #d2d8de;
+$grey80: #52606d;
+$grey80--blueish: #6a6e8b;
+$grey80--lightblueish: #61bfdb;
+
+$roundness: 6px;
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}

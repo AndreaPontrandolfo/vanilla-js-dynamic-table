@@ -1,0 +1,17 @@
+@import "variables";
+
+.skeleton {
+  background: $grey40;
+
+  &--circle {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    margin-left: 12px;
+  }
+
+  &--line {
+    height: 30px;
+    border-radius: 4px;
+  }
+}

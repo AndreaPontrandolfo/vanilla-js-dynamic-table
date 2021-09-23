@@ -1,0 +1,35 @@
+@import "variables";
+
+.btn--primary {
+  background: $grey80;
+  color: #fff;
+  font-size: 1rem;
+  border-radius: $roundness;
+  padding: 12px;
+  min-width: 148px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    background: lighten($grey80, $amount: 4%);
+    box-shadow: 0 6px 8px $grey40;
+  }
+
+  &:active {
+    transform: translateY(1px);
+    box-shadow: none;
+  }
+
+  &__text {
+    padding-left: 12px;
+  }
+}
+
+@media all and (max-width: (768) + px) {
+  .btn--primary {
+    width: 100%;
+    margin: 0 20px 15px 20px;
+  }
+}

@@ -1,0 +1,32 @@
+@import "variables";
+
+.icon-cloud-download,
+.icon-refresh {
+  width: 24px;
+  height: auto;
+  fill: #fff;
+
+  & > .secondary {
+    fill: #fff;
+  }
+}
+
+.icon-refresh {
+  & > .secondary {
+    fill: $grey80;
+  }
+}
+
+#refresh-cta:hover {
+  svg {
+    animation: rotation 1.6s infinite linear;
+  }
+}
+
+@media all and (max-width: (768) + px) {
+  #refresh-cta:hover {
+    svg {
+      animation: none;
+    }
+  }
+}

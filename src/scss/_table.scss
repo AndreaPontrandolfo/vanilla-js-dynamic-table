@@ -1,0 +1,48 @@
+@import "variables";
+
+.table-container {
+  border-radius: 8px;
+  border: 2px solid $grey40;
+  height: 80vh;
+  overflow: scroll;
+  position: relative;
+}
+
+table {
+  border-collapse: separate;
+  width: 100%;
+  table-layout: fixed;
+}
+
+td,
+th {
+  text-align: left;
+  padding: 18px;
+  vertical-align: middle;
+}
+
+th {
+  position: sticky;
+  top: 0;
+  border-bottom: 2px solid $grey30;
+  background: white;
+  color: lighten($grey80--blueish, $amount: 5%);
+}
+
+tr:nth-child(odd) {
+  background-color: $grey20;
+}
+
+@media all and (max-width: (768) + px) {
+  table {
+    border-top: 2px solid $grey40;
+  }
+
+  tr {
+    td:first-child,
+    th:first-child {
+      padding: 18px 0;
+      width: 20%;
+    }
+  }
+}

@@ -1,0 +1,54 @@
+@import "reset";
+@import "variables";
+@import "thumbnail";
+@import "buttons";
+@import "input";
+@import "table";
+@import "icons";
+@import "no-data";
+@import "skeletons";
+
+@font-face {
+  font-family: "ProximaNovaSoftW03-Regular";
+  src: url("https://db.onlinewebfonts.com/t/f1448054f14757d284c064b271c00cc6.eot");
+  src: url("https://db.onlinewebfonts.com/t/f1448054f14757d284c064b271c00cc6.eot?#iefix") format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/f1448054f14757d284c064b271c00cc6.woff2") format("woff2"),
+    url("https://db.onlinewebfonts.com/t/f1448054f14757d284c064b271c00cc6.woff") format("woff"),
+    url("https://db.onlinewebfonts.com/t/f1448054f14757d284c064b271c00cc6.ttf") format("truetype"),
+    url("https://db.onlinewebfonts.com/t/f1448054f14757d284c064b271c00cc6.svg#ProximaNovaSoftW03-Regular") format("svg");
+}
+
+html,
+body,
+*,
+body * {
+  box-sizing: border-box;
+  font-family: "ProximaNovaSoftW03-Regular", sans-serif;
+  font-size: 16px;
+  letter-spacing: 0.8px;
+}
+
+.container {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.controls {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 32px auto;
+}
+
+@media all and (max-width: (768) + px) {
+  .container {
+    max-width: none;
+  }
+  .table-container {
+    border-radius: 0;
+    border: none;
+    height: auto;
+    overflow: auto;
+  }
+}
